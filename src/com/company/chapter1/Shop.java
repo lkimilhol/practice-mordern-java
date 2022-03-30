@@ -1,7 +1,5 @@
 package com.company.chapter1;
 
-import static com.company.chapter1.Apple.GREEN;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,8 +16,7 @@ public class Shop {
         return result;
     }
 
-
-
+    // 명확히 하기 위해 추가. 이 인터페이스 선언이 없으면 java.util.function에서 import 됨
     public interface Predicate<T> {
         boolean test(T t);
     }
