@@ -1,7 +1,7 @@
-package com.company.chapter1;
+package com.company.chapter01;
 
-import static com.company.chapter1.Apple.GREEN;
-import static com.company.chapter1.Apple.RED;
+import static com.company.chapter01.Apple.GREEN;
+import static com.company.chapter01.Apple.RED;
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.ArrayList;
@@ -11,7 +11,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-class AppleTest {
+class ShopChapter01Test {
 
     private List<Apple> inventory;
 
@@ -33,7 +33,7 @@ class AppleTest {
 
         // when
         // 자바8 에서는 메서드를 전달 할 수 있다가 중요.
-        List<Apple> apples = Shop.filterApples(inventory, Apple::isGreenApple);
+        List<Apple> apples = ShopChapter01.filterApples(inventory, Apple::isGreenApple);
 
         // then
         assertEquals(1, apples.size());
@@ -46,7 +46,7 @@ class AppleTest {
 
         // when
         // 익명 함수 또는 람다로 전달.
-        List<Apple> apples = Shop.filterApples(inventory, (Apple a) -> GREEN.equals(a.getColor()));
+        List<Apple> apples = ShopChapter01.filterApples(inventory, (Apple a) -> GREEN.equals(a.getColor()));
 
         // then
         assertEquals(1, apples.size());
