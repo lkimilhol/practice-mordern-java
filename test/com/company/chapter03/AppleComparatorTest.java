@@ -1,9 +1,9 @@
 package com.company.chapter03;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 import org.junit.jupiter.api.Test;
@@ -24,7 +24,7 @@ class AppleComparatorTest {
         inventory.add(new Apple(Apple.RED, 4));
 
         // when
-        inventory.sort(new AppleComparator());
+        inventory.sort(Comparator.comparing(Apple::getWeight));
 
         // then
         assertEquals(1, inventory.get(0).getWeight());
